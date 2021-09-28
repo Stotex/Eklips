@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="resources/fancybox.css">
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="resources/fancybox.umd.js"></script>
+    <script src="translations.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Eklips</title>
@@ -13,6 +16,16 @@
 
 <body>
     <header>
+        <div id="cookie-bar">
+            <span class="cookieMessage">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra
+                eleifend
+                lacus. <span class="cookieRedText" style="color:#d41217; font-weight: 700;">Vitae ullamcorper
+                    metus.</span>
+            </span>
+            <button id="cookieFunction">Lorem ipsum</button>
+            <button>Lorem ipsum</button>
+        </div>
+
         <div class="logo-wrapper container">
             <img class="logo" src="resources/cherry.png">
             <div class="right">
@@ -22,6 +35,10 @@
                         <span></span>
                         <span></span>
                         <span></span>
+                    </div>
+                    <div class="dropdown">
+                        <span class="lang" data-lang="en">ENG</span>
+                        <span class="lang" data-lang="et">EST</span>
                     </div>
                 </div>
                 <div class="mobile-dropdown">
@@ -34,13 +51,13 @@
         <div class="border red"></div>
         <div class="navbar container">
             <ul>
-                <li>About cherry</li>
-                <li>Business areas</li>
-                <li>Corporate governance</li>
-                <li>Investors</li>
-                <li>Media</li>
-                <li>Career</li>
-                <li>Contact</li>
+                <li data-translate="about_cherry">About cherry</li>
+                <li data-translate="business_areas">Business areas</li>
+                <li data-translate="corporate_governance">Corporate governance</li>
+                <li data-translate="investors">Investors</li>
+                <li data-translate="media">Media</li>
+                <li data-translate="career">Career</li>
+                <li data-translate="contact">Contact</li>
             </ul>
             <p class="stock-price">CHER B: 59,50SEK +1.75</p>
             <div class="lang-switcher">
@@ -49,6 +66,10 @@
                     <span></span>
                     <span></span>
                     <span></span>
+                </div>
+                <div class="dropdown">
+                    <span class="lang" data-lang="en">ENG</span>
+                    <span class="lang" data-lang="et">EST</span>
                 </div>
             </div>
             <img class="search-btn" src="resources/search.png">
@@ -133,7 +154,11 @@
             </div>
 
             <div class="mySlides fade">
-                <img src="resources/PLAY BUTTON.png" class="sliderContent">
+                <p class="text-center">
+                    <a data-fancybox data-type="video" href="resources/trailer.mp4"><img class="sliderContent"
+                            width="110" height="110" alt="" src="resources/PLAY BUTTON.png" /></a>
+                </p>
+
             </div>
 
             <a class="prev">&#10094;</a>
@@ -148,7 +173,7 @@
 
         <div class="info-tab">
             <div id="pressreleaseContent">
-                <h2 class=cardTitle>Pressreleases</h2>
+                <h2 class=cardTitle data-translate="pressreleases">Pressreleases</h2>
                 <p class=cardDate>July 10, 2017</p>
                 <h3 class="cardText cardTextBig">PM 1 lorem ipsum
                     dolor sit
@@ -166,7 +191,7 @@
                 </div>
             </div>
             <div id="calendarContent">
-                <h2 class=cardTitle>Calendar</h2>
+                <h2 class=cardTitle data-translate="calendar">Calendar</h2>
 
                 <p class=cardDate>July 10, 2017</p>
                 <h3 class="cardText cardTextBig">Event 1 lorem ipsum
@@ -188,7 +213,7 @@
                 <a href="https://google.com" class="button cardButton">Lorem ipsum</a>
             </div>
             <div id="reportContent">
-                <h2 class=cardTitle>Cherry Interrim Report</h2>
+                <h2 class=cardTitle data-translate="interrim_report">Cherry Interrim Report</h2>
                 <p id=reportCardText>Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim
                     in
                     dolor euismod.</p>
@@ -216,7 +241,7 @@
                     ipsum</a>
             </div>
             <div id="shareContent">
-                <h2 id="shareCardTitle">The Share</h2>
+                <h2 id="shareCardTitle" data-translate="share">The Share</h2>
                 <p id="shareCardContent">NASDAQ OMXS (CHER B):</p>
                 <p id="shareCardPrice">59.50 SEK +1.75%</p>
 
@@ -247,7 +272,7 @@
         <div class="content-section">
             <div class="section left" id="onlineGamingSection">
                 <div class="content">
-                    <h3 class="sectionTitle">Online Gaming</h3>
+                    <h3 class="sectionTitle" data-translate="online_gaming">Online Gaming</h3>
                     <p class="sectionContent">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec
                         viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin
                         ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu. Curabitur
@@ -261,7 +286,7 @@
             <div class="section right" id="restaurantSection">
                 <img src="resources/restaurant.PNG">
                 <div class="content">
-                    <h3 class="sectionTitle">Restaurant Casino</h3>
+                    <h3 class="sectionTitle" data-translate="restaurant_casino">Restaurant Casino</h3>
                     <p class="sectionContent">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec
                         viverra
                         eleifend lacus, vitae
@@ -278,7 +303,7 @@
             </div>
             <div class="section left" id=developmentSection>
                 <div class="content">
-                    <h3 class="sectionTitle">Game Development</h3>
+                    <h3 class="sectionTitle" data-translate="game_development">Game Development</h3>
                     <p class="sectionContent">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec
                         viverra
                         eleifend lacus, vitae
@@ -296,7 +321,8 @@
             <div class="section right" id="marketingSection">
                 <img src="resources/marketing.PNG">
                 <div class="content">
-                    <h3 class="sectionTitle">Performance-based Marketing</h3>
+                    <h3 class="sectionTitle" data-translate="perfomance_based_marketing">Performance-based Marketing
+                    </h3>
                     <p class="sectionContent">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec
                         viverra
                         eleifend lacus, vitae
@@ -312,7 +338,7 @@
             </div>
             <div class="section left" id=gamingSection>
                 <div class="content">
-                    <h3 class="sectionTitle">Gaming Technology</h3>
+                    <h3 class="sectionTitle" data-translate="gaming_technology">Gaming Technology</h3>
                     <p class="sectionContent">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec
                         viverra
                         eleifend lacus, vitae
@@ -330,7 +356,7 @@
             <div class="section right" id="projectSection">
                 <img src="resources/projects.PNG">
                 <div class="content">
-                    <h3 class="sectionTitle">Development Projects</h3>
+                    <h3 class="sectionTitle" data-translate="development_projects">Development Projects</h3>
                     <p class="sectionContent">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec
                         viverra
                         eleifend lacus, vitae
@@ -346,21 +372,22 @@
             </div>
         </div>
         <footer>
-            <h2>Share this page</h2>
+            <h2 data-translate="share_this_page">Share this page</h2>
             <div class="share-tab">
-                <div id="facebookSocial">
+                <div id="facebookSocial" onclick="window.location='http://facebook.com'">
                     <img src="resources/facebook.png" alt="facebook icon">
                 </div>
-                <div id="twitterSocial">
+                <div id="twitterSocial" onclick="window.location='http://twitter.com'">
                     <img src="resources/twitter.png" alt="twitter icon">
                 </div>
-                <div id="linkedinSocial">
+                <div id="linkedinSocial" onclick="window.location='http://linkedin.com'">
                     <img src="resources/linkedin.png" alt="linkedin icon">
                 </div>
-                <div id="emailSocial">
+                <div id="emailSocial" onclick="window.location='mailto: test@cherry.com'">
                     <img src="resources/mail.png" alt="email icon">
                 </div>
-                <div id="printSocial">
+                <div id="printSocial" onclick="window.location='window.print()'">
+                    <!-- Can't be accessed on a local machine -->
                     <img src="resources/print.png" alt="print icon">
                 </div>
             </div>

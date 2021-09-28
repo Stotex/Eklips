@@ -1,0 +1,42 @@
+var translations = {
+    "et": {
+        "about_cherry": "Meist",
+        "business_areas": "Asukohad",
+        "corporate_governance": "Juhtimine",
+        "investors": "Investorid",
+        "media": "Meedia",
+        "career": "Karjäär",
+        "contact": "Kontakt",
+        "pressreleases": "Pressiteated",
+        "calendar": "Kalender",
+        "interrim_report": "Cherry vahearuanne",
+        "share": "Aktsia",
+        "online_gaming": "Võrgumängud",
+        "restaurant_casino": "Restorani Kasiino",
+        "game_development": "Mängu arendus",
+        "performance_based_marketing": "Tulemuspõhine turundus",
+        "gaming_technology": "Mängutehnoloogia",
+        "development_projects": "Arendusprojektid",
+        "share_this_page": "Jaga seda lehte"
+    },
+    "en": {
+        "about_cherry": "About cherry",
+        "business_areas": "Business areas",
+        "corporate_governance": "Corporate governance",
+        "investors": "Investors",
+        "media": "Media",
+        "career": "Career",
+        "contact": "Contact",
+        "pressreleases": "Pressreleases",
+        "calendar": "Calendar",
+        "interrim_report": "Cherry Interrim Report",
+        "share": "The Share",
+        "online_gaming": "Online Gaming",
+        "restaurant_casino": "Restaurant Casino",
+        "game_development": "Game Development",
+        "performance_based_marketing": "Performance-based Marketing",
+        "gaming_technology": "Gaming Technology",
+        "development_projects": "Development Projects",
+        "share_this_page": "Share this page"
+    }
+}

@@ -1,3 +1,17 @@
+function toggleLang(lang) {
+    var elems = $('[data-translate]');
+
+    for (var i = 0; i < elems.length; i++) {
+        var elem = $(elems).eq(i);
+
+        var key = $(elem).attr('data-translate')
+        var value = translations[lang][key]
+
+        $(elem).text(value)
+    }
+}
+
+
 $(document).ready(function () {
     var slideIndex = 1;
     showSlides(slideIndex);
@@ -26,6 +40,14 @@ $(document).ready(function () {
         dots[slideIndex - 1].className += " active";
     }
 
+    $('[data-lang]').click(function () {
+        var lang = $(this).attr('data-lang');
+
+        toggleLang(lang)
+    })
+
+    toggleLang('en')
+
     $('.slideshow-container .pagination .dot').click(function () {
         var curSlide = $(this).index() + 1;
 
@@ -40,7 +62,15 @@ $(document).ready(function () {
         plusSlides(-1);
     })
 
-    $('.navbar ul li').click(function() {
+    $("body").click(function (e) {
+        if (!$(e.target).parents('.navbar').length) {
+            $('.dropdown.active').removeClass('active')
+            $('.search-bar.active').removeClass('active')
+        }
+    }
+    );
+
+    $('.navbar ul li').click(function () {
         var index = $(this).index();
 
         $('.navbar ul li').removeClass('active');
@@ -56,15 +86,38 @@ $(document).ready(function () {
     $('.navbar .search-btn').click(function () {
         $('header .dropdown').removeClass('active');
         $('header .navbar ul li').removeClass('active');
-        $('header .search-bar').addClass('active');
+        $('header .search-bar').toggleClass('active');
+
+
     });
+
+
 
     $('header .logo-wrapper .mobile-dropdown').click(function () {
         $('header').toggleClass('active');
     });
 
     $('header .dropdown .section h4').click(function () {
+        var isCurActive = $(this).parent().hasClass('active');
+
         $('header .dropdown .section').removeClass('active');
-        $(this).parent().addClass('active');
+
+        if (!isCurActive) {
+            $(this).parent().addClass('active');
+        }
     })
+
 });
+
+window.onload = function () {
+    const targetDiv = document.getElementById("cookie-bar");
+    const btn = document.getElementById("cookieFunction");
+    btn.onclick = function () {
+        if (targetDiv.style.display !== "none") {
+            targetDiv.style.display = "none";
+        } else {
+            targetDiv.style.display = "block";
+        }
+    };
+};
+
